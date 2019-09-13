@@ -12,7 +12,6 @@ import { Subscription } from 'rxjs';
 })
 export class NewPostComponent implements OnInit, OnDestroy {
 
-
   postForm: FormGroup;
   post: Post;
   index: number;

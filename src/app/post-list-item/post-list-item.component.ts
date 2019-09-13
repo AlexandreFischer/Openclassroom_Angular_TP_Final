@@ -8,14 +8,14 @@ import { PostsService } from '../service/posts.service';
 })
 export class PostListItemComponent implements OnInit {
 
- 
+
   @Input() title: string;
   @Input() content: string;
   @Input() loveIts: number;
   @Input() created_at: Date;
   @Input() index: number;
 
-  constructor( private postsService: PostsService) { }
+  constructor(private postsService: PostsService) { }
 
   ngOnInit() {
   }

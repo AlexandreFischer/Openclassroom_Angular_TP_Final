@@ -36,7 +36,6 @@ export class PostsService {
     createNewPost(post: Post) {
         this.posts.push(post);
         this.emitPosts();
-
     }
 
     removePost(index: number) {
