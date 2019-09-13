@@ -1,0 +1,33 @@
+<li [ngClass]="{
+            'list-group-item': true,
+            'list-group-item-success': loveIts > 0,
+            'list-group-item-danger': loveIts < 0
+        }">
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-8">
+                <h3>{{ title }}</h3>
+            </div>
+            <div class="col-4 text-right">
+                <h4>{{ created_at | date: 'short' }}</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <p class="text-justify">{{ content }}</p>
+                <p>
+                    <button class="btn btn-success" (click)="onLike()">Love It</button>
+                    &nbsp;
+                    <button class="btn btn-danger" (click)="onDislike()">Don't Love It</button>
+                    <strong [ngClass]="{
+                                        'ml-3': true,
+                                        'text-success': loveIts > 0,
+                                        'text-danger': loveIts < 0
+                                        }">&nbsp; {{ loveIts }} point(s)</strong>
+                </p>
+                <button class="btn btn-primary" (click)="onDeletePost()"> Supprimer le post </button>
+            </div>
+        </div>
+    </div>
+</li>
